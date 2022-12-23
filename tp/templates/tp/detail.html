@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+{% block content %}
+    
+            
+<br><a href="{% url 'index' %}">Rétour sur la page d'accueil</button></a></button>
+    <div class="w3-row-padding" style="text-align: center;">
+            
+        <h1 style="text-align: center;"> <strong>Fim:{{cinema.nom}}</strong> </h1> <br> <br>
+        <div class="w3-third w3-container w3-margin-bottom" style="margin-left: 15%;">
+        <img src="{{cinema.image.url}}" alt="{{cinema.image}}}" alt="Norway" style="width:200%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>Nom du film:{{cinema.nom}}</b></p>
+            <p>Producteur:{{cinema.producteur}}&nbsp <br>
+                Durée:{{cinema.heure}} <br>
+                Acteur:{{cinema.acteur}} <br>
+                synopsis:{{cinema.synopsis}} <br>
+                Note:{{cinema.note}} <br>
+                
+            </p>
+        </div>
+        </div>
+        
+        
+    </div>
+
+
+    
+    
+{% endblock %}
+    
+</body>
+</html>
